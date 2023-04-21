@@ -1,11 +1,15 @@
 package com.fhhk.service.impl;
 
+import com.fhhk.dao.ServiceDao;
 import com.fhhk.dao.TrolleyDao;
+import com.fhhk.dao.impl.ServiceDaoImpl;
 import com.fhhk.dao.impl.TrolleyDaoImpl;
+import com.fhhk.entity.Service;
 import com.fhhk.entity.Trolley;
 import com.fhhk.service.TrolleyService;
 
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * @BelongsProject:fenghaunghaukai
@@ -17,6 +21,7 @@ import java.sql.SQLException;
  */
 public class TrolleyServiceImpl implements TrolleyService {
     private TrolleyDao trolleyDao = new TrolleyDaoImpl();
+    private ServiceDao serviceDao = new ServiceDaoImpl();
     @Override
     public int addTrolley(Trolley trolley) {
         int customer_id = trolley.getCustomer_id();
@@ -32,6 +37,52 @@ public class TrolleyServiceImpl implements TrolleyService {
                 trolley.setTrolley_number(exists.getTrolley_number()+trolley.getTrolley_number());
                  result = trolleyDao.updateTrolley(trolley);
             }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return result;
+    }
+
+    /**
+     * 查看当前用户的购物车信息
+     * @param customer_id
+     * @return
+     * @throws SQLException
+     */
+    @Override
+    public List<Trolley> selectTrolleyByCustomer_id(Integer customer_id) throws SQLException {
+        List<Trolley> trolleyList = null;
+        try {
+            trolleyList = trolleyDao.selectTrolleyByCustomer_id(customer_id);
+            trolleyList.forEach(trolley -> {
+                int service_id = trolley.getService_id();
+                Service service = null;
+                try {
+                    //查询服务
+                    service = serviceDao.selectByService_id(service_id);
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+                trolley.setService(service);
+            });
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return trolleyList;
+    }
+
+    /**
+     * 删除当前用户的购物车信息
+     * @param tid
+     * @param customer_id
+     * @return
+     * @throws SQLException
+     */
+    @Override
+    public int deleteTrolley(Integer tid, Integer customer_id) throws SQLException {
+        int result = 0;
+        try {
+            result = trolleyDao.deleteTrolley(tid, customer_id);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

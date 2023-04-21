@@ -18,19 +18,18 @@ public class Trolley implements Serializable {
     private String order_id;//订单编号
     //添加服务映射
     private Service service;
-    private Staff staff;
+
 
     public Trolley() {
     }
 
-    public Trolley(int tid, int customer_id, int service_id, int trolley_number, String order_id, Service service, Staff staff) {
+    public Trolley(int tid, int customer_id, int service_id, int trolley_number, String order_id, Service service) {
         this.tid = tid;
         this.customer_id = customer_id;
         this.service_id = service_id;
         this.trolley_number = trolley_number;
         this.order_id = order_id;
         this.service = service;
-        this.staff = staff;
     }
 
     /**
@@ -129,23 +128,7 @@ public class Trolley implements Serializable {
         this.service = service;
     }
 
-    /**
-     * 获取
-     * @return staff
-     */
-    public Staff getStaff() {
-        return staff;
-    }
-
-    /**
-     * 设置
-     * @param staff
-     */
-    public void setStaff(Staff staff) {
-        this.staff = staff;
-    }
-
     public String toString() {
-        return "Trolley{tid = " + tid + ", customer_id = " + customer_id + ", service_id = " + service_id + ", trolley_number = " + trolley_number + ", order_id = " + order_id + ", service = " + service + ", staff = " + staff + "}";
+        return "Trolley{tid = " + tid + ", customer_id = " + customer_id + ", service_id = " + service_id + ", trolley_number = " + trolley_number + ", order_id = " + order_id + ", service = " + service + "}";
     }
 }

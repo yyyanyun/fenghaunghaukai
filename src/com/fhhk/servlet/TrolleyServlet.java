@@ -9,6 +9,8 @@ import com.fhhk.utils.ResultVo;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.SQLException;
+import java.util.List;
 
 /**
  * @BelongsProject:fenghaunghaukai
@@ -52,6 +54,43 @@ public class TrolleyServlet extends BaseServlet{
         //转Json
         JsonUtils.toJson(resultVo,response);
 
+
+    }
+
+    public void selectTrolley(HttpServletRequest request, HttpServletResponse response) throws SQLException {
+        int customer_id = Integer.parseInt(request.getParameter("customer_id"));
+
+        List<Trolley> trolleys = trolleyService.selectTrolleyByCustomer_id(customer_id);
+
+        ResultVo<List<Trolley>> resultVo = new ResultVo<>();
+        if (trolleys != null && trolleys.size()>0) {
+            resultVo.setCode(200);
+            resultVo.setMessage("查询成功");
+            resultVo.setData(trolleys);
+        }else {
+            resultVo.setCode(500);
+            resultVo.setMessage("查询失败");
+            resultVo.setData(null);
+        }
+        JsonUtils.toJson(resultVo,response);
+    }
+    public void deleteTrolley(HttpServletRequest request, HttpServletResponse response) throws SQLException {
+        int tid = Integer.parseInt(request.getParameter("tid"));
+        int customer_id = Integer.parseInt(request.getParameter("customer_id"));
+
+        int result = trolleyService.deleteTrolley(tid, customer_id);
+
+        ResultVo<Boolean> resultVo = new ResultVo<>();
+        if (result >0) {
+            resultVo.setCode(200);
+            resultVo.setData(true);
+            resultVo.setMessage("删除成功");
+        }else {
+            resultVo.setCode(500);
+            resultVo.setData(false);
+            resultVo.setMessage("删除失败");
+        }
+        JsonUtils.toJson(resultVo,response);
 
     }
 }
