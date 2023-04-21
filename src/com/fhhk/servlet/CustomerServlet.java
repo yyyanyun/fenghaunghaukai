@@ -3,6 +3,7 @@ import com.fhhk.entity.Customer;
 import com.fhhk.service.CustomerService;
 import com.fhhk.service.impl.CustomerServiceimpl;
 import com.fhhk.utils.JsonUtils;
+import com.fhhk.utils.PageUtils;
 import com.fhhk.utils.ResultVo;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -87,4 +88,26 @@ public class CustomerServlet extends BaseServlet {
         JsonUtils.toJson(resultVo,resp);
 
     }
+    public void selectByPageCustomer(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String currentPageNo = request.getParameter("currentPageNo");
+        String pageSize = request.getParameter("pageSize");
+        String name = request.getParameter("customer_name");
+        String startTime = request.getParameter("startTime");
+        String endTime = request.getParameter("endTime");
+        PageUtils<Customer> pageUtils = customerService.selectCustomerpage(name, startTime, endTime, currentPageNo, pageSize);
+        ResultVo<PageUtils> resultVo = new ResultVo<>();
+        if (pageUtils !=null){
+            resultVo.setData(pageUtils);
+            resultVo.setMessage("成功");
+            resultVo.setCode(200);
+        }else {
+            resultVo.setData(null);
+            resultVo.setMessage("失败");
+            resultVo.setCode(500);
+        }
+        JsonUtils.toJson(resultVo,response);
+    }
 }
+
+
+
