@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface OrderDao {
     //通过顾客ID查找Order集合
-    List<Order> selectAllOrderByOrderId(int order_id) throws SQLException;
+    List<Order> selectOrderByOrderId(Integer order_id) throws SQLException;
 }

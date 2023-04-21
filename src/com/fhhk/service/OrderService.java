@@ -5,5 +5,5 @@ import com.fhhk.entity.Order;
 import java.util.List;
 
 public interface OrderService {
-    List<Order> selectAllOrderByOrderId(int order_id);
+    List<Order> selectByOrderId(Integer order_id);
 }

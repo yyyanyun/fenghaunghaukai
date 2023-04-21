@@ -5,5 +5,5 @@ import com.fhhk.entity.Service;
 import java.sql.SQLException;
 
 public interface ServiceDao {
-    Service selectByServiceId(int service_id) throws SQLException;
+    Service selectByServiceId(Integer service_id) throws SQLException;
 }

@@ -11,9 +11,9 @@ import java.util.List;
 
 public class TrolleyDaoImpl implements TrolleyDao {
     @Override
-    public List<Trolley> selectByOrderId(int order_id) throws SQLException {
+    public List<Trolley> selectByOrderId(Integer order_id) throws SQLException {
         QueryRunner qr = DBUtils.DB.getQr();
-        String sql = "SELECT * FROM 'trolley' WHERE order_id=?";
+        String sql = "SELECT * FROM trolley WHERE order_id=?";
         List<Trolley> trolleyList = qr.query(sql,new BeanListHandler<Trolley>(Trolley.class),order_id);
         return trolleyList;
     }

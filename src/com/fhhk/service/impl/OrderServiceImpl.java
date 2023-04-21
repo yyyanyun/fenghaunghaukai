@@ -19,10 +19,11 @@ public class OrderServiceImpl implements OrderService {
     private TrolleyDao trolleyDao = new TrolleyDaoImpl();
     private ServiceDao serviceDao = new ServiceDaoImpl();
     @Override
-    public List<Order> selectAllOrderByOrderId(int order_id) {
+    public List<Order> selectByOrderId(Integer order_id) {
         List<Order> orderList = null;
         try {
-            orderList = orderDao.selectAllOrderByOrderId(order_id);
+            orderList = orderDao.selectOrderByOrderId(order_id);
+            System.out.println(orderList.toString());
             orderList.forEach((Order o)->{
                 List<Trolley> trolleyList = null;
                 try {

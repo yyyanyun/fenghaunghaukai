@@ -23,7 +23,7 @@ public class OrderServlet extends BaseServlet {
         //获取前端传递的order_id
         String order_id = request.getParameter("order_id");
         //调用service层的方法
-        List<Order> orderList = orderService.selectAllOrderByOrderId(Integer.parseInt(order_id));
+        List<Order> orderList = orderService.selectByOrderId(Integer.parseInt(order_id));
         if (orderList != null && orderList.size() > 0){
             resultVo.setCode(200);
             resultVo.setMessage("成功");

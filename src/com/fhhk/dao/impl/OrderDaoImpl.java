@@ -8,14 +8,15 @@ import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrderDaoImpl implements OrderDao {
 
     @Override
-    public List<Order> selectAllOrderByOrderId(int order_id) throws SQLException {
+    public List<Order> selectOrderByOrderId(Integer order_id) throws SQLException {
         QueryRunner qr = DBUtils.DB.getQr();
-        String sql = "select * from 'order' where customer_id=?";
+        String sql = "SELECT * FROM `order` WHERE order_id=?";
         List<Order> orderList = qr.query(sql,new BeanListHandler<Order>(Order.class),order_id);
         return orderList;
     }
