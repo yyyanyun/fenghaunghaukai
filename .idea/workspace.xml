@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="fenghaunghaukai:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="基础搭建">
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/entity/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/servlet/UserServlet.java" afterDir="false" />
+    <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="生成验证码">
+      <change afterPath="$PROJECT_DIR$/src/com/fhhk/dao/impl/UserDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/fhhk/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/servlet/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/servlet/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/utils/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/utils/db.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +32,20 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="test" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -166,7 +185,7 @@
       <workItem from="1681983677006" duration="5026000" />
       <workItem from="1681994973410" duration="727000" />
       <workItem from="1682037195797" duration="2502000" />
-      <workItem from="1682043956423" duration="303000" />
+      <workItem from="1682043956423" duration="5939000" />
     </task>
     <task id="LOCAL-00001" summary="基础搭建">
       <created>1681984204599</created>
@@ -175,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681984204599</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="生成验证码">
+      <created>1682044279651</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682044279651</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +223,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/sql" />
+                        <option value="test" />
                       </list>
                     </value>
                   </entry>
@@ -212,6 +238,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="基础搭建" />
-    <option name="LAST_COMMIT_MESSAGE" value="基础搭建" />
+    <MESSAGE value="生成验证码" />
+    <option name="LAST_COMMIT_MESSAGE" value="生成验证码" />
   </component>
 </project>
