@@ -43,13 +43,14 @@ public class OrderServlet extends BaseServlet {
     public void  addOrder(HttpServletRequest request, HttpServletResponse response) throws ParseException {
         ResultVo<Boolean> resultVo = new ResultVo<>();
 
+        String customer_id = request.getParameter("customer_id");
         String date_t = request.getParameter("date_time");
         String sum_monetary = request.getParameter("sum_monetary");
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         Date date_time = sdf.parse(date_t);
 
-        int num = orderService.addOrder(date_time, Double.parseDouble(sum_monetary));
+        int num = orderService.addOrder(Integer.parseInt(customer_id),date_time, Double.parseDouble(sum_monetary));
 
         if (num>0){
             resultVo.setCode(200);
@@ -60,11 +61,15 @@ public class OrderServlet extends BaseServlet {
             resultVo.setMessage("失败");
             resultVo.setData(false);
         }
+
+        JsonUtils.toJson(resultVo,response);
     }
 
     public void  changeOrder(HttpServletRequest request, HttpServletResponse response) throws ParseException {
         ResultVo<Boolean> resultVo = new ResultVo<>();
 
+        String order_id = request.getParameter("order_id");
+        String customer_id = request.getParameter("customer_id");
         String date_t = request.getParameter("date_time");
         String sum_monetary = request.getParameter("sum_monetary");
         String order_status = request.getParameter("order_status");
@@ -73,7 +78,7 @@ public class OrderServlet extends BaseServlet {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         Date date_time = sdf.parse(date_t);
 
-        int num = orderService.changeOrder(date_time,Double.parseDouble(sum_monetary),Integer.parseInt(order_status),Integer.parseInt(pay_status));
+        int num = orderService.changeOrder(Integer.parseInt(order_id),Integer.parseInt(customer_id),date_time,Double.parseDouble(sum_monetary),Integer.parseInt(order_status),Integer.parseInt(pay_status));
 
         if (num>0){
             resultVo.setCode(200);
@@ -84,6 +89,8 @@ public class OrderServlet extends BaseServlet {
             resultVo.setMessage("失败");
             resultVo.setData(false);
         }
+
+        JsonUtils.toJson(resultVo,response);
     }
 
     public void  delOrder(HttpServletRequest request, HttpServletResponse response){
@@ -102,5 +109,7 @@ public class OrderServlet extends BaseServlet {
             resultVo.setMessage("失败");
             resultVo.setData(false);
         }
+
+        JsonUtils.toJson(resultVo,response);
     }
 }

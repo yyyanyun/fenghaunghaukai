@@ -24,25 +24,25 @@ public class OrderDaoImpl implements OrderDao {
     }
 
     @Override
-    public int addOrder(Date date_time, Double sum_monetary) throws SQLException {
+    public int addOrder(Integer customer_id,Date date_time, Double sum_monetary) throws SQLException {
         QueryRunner qr = DBUtils.DB.getQr();
-        String sql = "INSERT INTO `order`(date_time,sum_monetary,order_status,pay_status) VALUES (?,?,1,1)";
-        int num = qr.update(sql,date_time,sum_monetary);
+        String sql = "INSERT INTO `order`(customer_id,date_time,sum_monetary,order_status,pay_status) VALUES (?,?,?,1,1)";
+        int num = qr.update(sql,customer_id,date_time,sum_monetary);
         return num;
     }
 
     @Override
-    public int changeOrder(Date date_time, Double sum_monetary,Integer order_status,Integer pay_status) throws SQLException {
+    public int changeOrder(Integer order_id,Integer customer_id,Date date_time, Double sum_monetary,Integer order_status,Integer pay_status) throws SQLException {
         QueryRunner qr = DBUtils.DB.getQr();
-        String sql = "UPDATE 'order' SET date_time=?,sum_monetary=?,order_status=?,pay_status=?";
-        int num = qr.update(sql,date_time,sum_monetary,order_status,pay_status);
+        String sql = "UPDATE `order` SET customer_id=?,date_time=?,sum_monetary=?,order_status=?,pay_status=? WHERE order_id=?";
+        int num = qr.update(sql,customer_id,date_time,sum_monetary,order_status,pay_status,order_id);
         return num;
     }
 
     @Override
     public int delOrder(Integer order_id) throws SQLException {
         QueryRunner qr = DBUtils.DB.getQr();
-        String sql = "DELETE FROM 'order' WHERE order_id=?";
+        String sql = "DELETE FROM `order` WHERE order_id=?";
         int num = qr.update(sql,order_id);
         return num;
     }

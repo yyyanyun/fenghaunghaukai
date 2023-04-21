@@ -51,9 +51,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public int addOrder(Date date_time, Double sum_monetary) {
+    public int addOrder(Integer customer_id,Date date_time, Double sum_monetary) {
         try {
-            return orderDao.addOrder(date_time,sum_monetary);
+            return orderDao.addOrder(customer_id,date_time,sum_monetary);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -61,9 +61,9 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public int changeOrder(Date date_time, Double sum_monetary, Integer order_status, Integer pay_status) {
+    public int changeOrder(Integer order_id,Integer customer_id,Date date_time, Double sum_monetary, Integer order_status, Integer pay_status) {
         try {
-            return orderDao.changeOrder(date_time, sum_monetary, order_status, pay_status);
+            return orderDao.changeOrder(order_id,customer_id,date_time, sum_monetary, order_status, pay_status);
         } catch (SQLException e) {
             e.printStackTrace();
         }
