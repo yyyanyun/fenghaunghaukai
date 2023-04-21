@@ -14,8 +14,8 @@ public class Trolley implements Serializable {
     private int tid;
     private int customer_id;//用户id
     private int service_id;//服务id
-    private int trolley_number;
-    private String order_id;
+    private int trolley_number;//数量
+    private String order_id;//订单编号
     //添加服务映射
     private Service service;
 
