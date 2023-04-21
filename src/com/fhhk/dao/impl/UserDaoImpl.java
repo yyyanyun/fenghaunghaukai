@@ -22,4 +22,29 @@ public class UserDaoImpl implements UserDao {
         }
         return customer;
     }
+
+    @Override
+    public Customer selectByPhone(String phone) {
+        String sql = "select * from customer where phone = ?";
+        Customer customer = null;
+        try {
+            customer = qr.query(sql, new BeanHandler<>(Customer.class), phone);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return customer;
+    }
+
+    @Override
+    public int addCustomer(Customer c) {
+        int num = 0;
+        String sql = "INSERT INTO customer(customer_name,customer_pwd, gender, age, phone,address,customer_date,`number`,remark) VALUES (?,?,?,?,?,?,?,?,?);";
+        Object[] obj = {c.getCustomer_name(),c.getCustomer_pwd(),c.getGender(),c.getAge(),c.getPhone(),c.getAddress(),c.getCustomer_date(),c.getNumber(),c.getRemark()};
+        try {
+            num = qr.update(sql, obj);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return num;
+    }
 }

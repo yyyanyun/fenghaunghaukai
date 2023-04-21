@@ -10,12 +10,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.time.LocalDateTime;
 
 @WebServlet(name = "userServlet", urlPatterns = "/userServlet")
-public class UserServlet extends BaseServlet{
+public class UserServlet extends BaseServlet {
     private final UserService userService = new UserServiceImpl();
+
     // 生成验证码
-    public void checkedCode(HttpServletRequest req , HttpServletResponse resp) {
+    public void checkedCode(HttpServletRequest req, HttpServletResponse resp) {
         // 生成验证码
         String code = userService.checkCode();
         //  获取session
@@ -33,7 +35,8 @@ public class UserServlet extends BaseServlet{
         }
         JsonUtils.toJson(resultVo, resp);
     }
-    public void checkLogin(HttpServletRequest req , HttpServletResponse resp){
+
+    public void checkLogin(HttpServletRequest req, HttpServletResponse resp) {
         // 获取参数
         String phone = req.getParameter("phone");
         String customer_pwd = req.getParameter("customer_pwd");
@@ -42,22 +45,65 @@ public class UserServlet extends BaseServlet{
         // 获取结果集
         ResultVo<Customer> resultVo = new ResultVo<>();
         // 判断验证码是否正确
-        if (codeStr.equals(code)){
+        if (codeStr.equals(code)) {
             Customer customer = userService.selectByPhoneAndPwd(phone, customer_pwd);
-            if (customer != null){
+            if (customer != null) {
                 resultVo.setCode(200);
                 resultVo.setMessage("登录成功");
                 resultVo.setData(customer);
-            }else {
+            } else {
                 resultVo.setCode(500);
                 resultVo.setMessage("用户名或者密码错误");
             }
-        }else {
+        } else {
             resultVo.setCode(500);
             resultVo.setMessage("验证码错误");
         }
-        JsonUtils.toJson(resultVo,resp);
+        JsonUtils.toJson(resultVo, resp);
+    }
 
+    public void checkPhone(HttpServletRequest req, HttpServletResponse resp) {
+        String phone = req.getParameter("phone");
+        Customer customer = userService.selectByPhone(phone);
+        ResultVo<Boolean> resultVo = new ResultVo<>();
+        if (customer != null){
+            resultVo.setCode(500);
+            resultVo.setMessage("用户已存在");
+            resultVo.setData(false);
+        }else {
+            resultVo.setCode(200);
+            resultVo.setMessage("电话号码未被注册");
+            resultVo.setData(true);
+        }
+        JsonUtils.toJson(resultVo,resp);
+    }
+    //增加用户
+    public void addCustomer(HttpServletRequest req, HttpServletResponse resp){
+        // 获取参数
+        String customer_name = req.getParameter("customer_name");
+        String customer_pwd = req.getParameter("customer_pwd");
+        String gender = req.getParameter("gender");
+        int age = Integer.parseInt(req.getParameter("age"));
+        String phone = req.getParameter("phone");
+        String address = req.getParameter("address");
+        LocalDateTime customer_date = LocalDateTime.parse(req.getParameter("customer_date"));
+        int number = Integer.parseInt(req.getParameter("number"));
+        String remark = req.getParameter("remark");
+
+        Customer c = new Customer(0,customer_name,customer_pwd,gender,age,phone,address,customer_date,number,remark);
+
+        ResultVo<Boolean> resultVo = new ResultVo<>();
+        int i = userService.addCustomer(c);
+        if (i>0){
+            resultVo.setCode(200);
+            resultVo.setMessage("注册成功");
+            resultVo.setData(true);
+        }else {
+            resultVo.setCode(500);
+            resultVo.setMessage("注册失败");
+            resultVo.setData(false);
+        }
+        JsonUtils.toJson(resultVo,resp);
     }
 
 }

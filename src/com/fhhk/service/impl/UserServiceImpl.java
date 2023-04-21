@@ -17,4 +17,14 @@ public class UserServiceImpl implements UserService {
     public Customer selectByPhoneAndPwd(String phone, String customer_pwd) {
         return userDao.selectByPhoneAndPwd(phone,customer_pwd);
     }
+
+    @Override
+    public Customer selectByPhone(String phone) {
+        return userDao.selectByPhone(phone);
+    }
+
+    @Override
+    public int addCustomer(Customer customer) {
+        return userDao.addCustomer(customer);
+    }
 }
