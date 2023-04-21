@@ -71,4 +71,20 @@ public class CustomerServlet extends BaseServlet {
         JsonUtils.toJson(resultVo,resp);
 
     }
+    public void  deleteCustomer(HttpServletRequest req,HttpServletResponse resp){
+        String customer_id = req.getParameter("customer_id");
+        int i = customerService.deleteCustomer(customer_id);
+        ResultVo<Boolean> resultVo=new ResultVo<>();
+        if(i>0){
+            resultVo.setCode(200);
+            resultVo.setMessage("成功");
+            resultVo.setData(true);
+        }else {
+            resultVo.setCode(500);
+            resultVo.setMessage("失败");
+            resultVo.setData(false);
+        }
+        JsonUtils.toJson(resultVo,resp);
+
+    }
 }

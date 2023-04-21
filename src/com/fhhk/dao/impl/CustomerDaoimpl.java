@@ -34,7 +34,7 @@ public class CustomerDaoimpl implements CustomerDao {
 
     @Override
     public int deleteCustomer(String cid) throws SQLException {
-        String sql="delete from customer where customer_id ="+cid;
+        String sql="delete from customer where customer_id  in("+cid+")";
         int update = qr.update(sql);
         return update;
     }

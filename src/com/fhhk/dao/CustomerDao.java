@@ -9,5 +9,4 @@ Customer selectCustomerbycid(int cid) throws SQLException;
 int selectCustomercount(int cid) throws SQLException;
 int updateCustomer(Customer customer) throws SQLException;
 int deleteCustomer(String cid) throws SQLException;
-
 }
