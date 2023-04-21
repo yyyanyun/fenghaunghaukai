@@ -1,37 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/fenghaunghaukai_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib__2_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fenghaunghaukai.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/servlet/BaseServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/utils/DBUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/utils/JDBCUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/utils/JsonUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/utils/MD5Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/utils/PageUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/utils/ResultVo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/utils/StringUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/utils/VerifyCodeUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/utils/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-dbutils-1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-fileupload-1.2.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/commons-io-1.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/druid-1.1.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/fastjson-1.2.13.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/jstl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-8.0.29.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/standard.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_dbutils_1_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/fhhk/dao/TrolleyDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/fhhk/dao/impl/TrolleyDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/fhhk/entity/Trolley.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib__2_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fenghaunghaukai.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fenghaunghaukai.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/utils/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/utils/db.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +26,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="宋大明" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2OgYQCzgVIFr1xguLR13bqBw448" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -63,13 +56,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/java/ideaProjects/fenghaunghaukai/src/com/fhhk",
+    "last_opened_file_path": "D:/qflsl/Utiles/apache-tomcat-8.5.29-windows-x64/apache-tomcat-8.5.29/lib",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "库",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
@@ -84,7 +77,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.87" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.87" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="BROWSER_ID" value="37cae5b9-e8b2-4949-9172-aafa37fbc09c" />
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="fenghaunghaukai:war exploded">
@@ -94,7 +87,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="571f5cc3-e0e6-4914-9619-a35371f9815a" />
+        <option name="BASE_DIRECTORY_NAME" value="15a1520f-8d01-4c91-a215-719ca21b3d41" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -102,7 +95,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="58729" />
+        <option name="DEBUG_PORT" value="56864" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -181,6 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1681983675630</updated>
       <workItem from="1681983677006" duration="369000" />
+      <workItem from="1682063564935" duration="1986000" />
     </task>
     <servers />
   </component>
