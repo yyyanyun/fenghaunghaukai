@@ -15,4 +15,8 @@ public interface OrderDao {
     int changeOrder(Integer order_id,Integer customer_id,Date date_time,Double sum_monetary,Integer order_status,Integer pay_status) throws SQLException;
 
     int delOrder(Integer order_id) throws SQLException;
+
+    List<Order> selectOrderList(Integer order_id,Integer customer_id,Double sum_monetary,Integer order_status,Integer pay_status,String startTime,String endTime,Integer currentPageNo,Integer pageSize) throws SQLException;
+
+    Integer selectOrderCount(Integer order_id,Integer customer_id,Double sum_monetary,Integer order_status,Integer pay_status,String startTime,String endTime) throws SQLException;
 }

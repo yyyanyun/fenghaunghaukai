@@ -10,6 +10,7 @@ import com.fhhk.entity.Order;
 import com.fhhk.entity.Service;
 import com.fhhk.entity.Trolley;
 import com.fhhk.service.OrderService;
+import com.fhhk.utils.PageUtils;
 
 import java.sql.SQLException;
 import java.util.Date;
@@ -78,5 +79,34 @@ public class OrderServiceImpl implements OrderService {
             e.printStackTrace();
         }
         return -1;
+    }
+
+    @Override
+    public PageUtils<Order> selectByPageOrder(Integer order_id, Integer customer_id, Double sum_monetary, Integer order_status, Integer pay_status, String startTime, String endTime, String currentPageNoStr, String pageSizeStr) {
+        Integer currenPageNo = 1;
+        if (currentPageNoStr != null && !"".equals(currentPageNoStr)){
+            currenPageNo = Integer.parseInt(currentPageNoStr);
+        }
+        Integer pageSize = 2;
+        if (pageSizeStr!=null && !"".equals(pageSizeStr)){
+            pageSize = Integer.parseInt(pageSizeStr);
+        }
+        Integer totalPageCount = null;
+        Integer totalPageSize = null;
+        List<Order> orderList = null;
+        try {
+            totalPageCount = orderDao.selectOrderCount(order_id,customer_id,sum_monetary,order_status,pay_status,startTime, endTime);
+            totalPageSize = totalPageCount % pageSize == 0 ? totalPageCount/pageSize : totalPageCount/pageSize + 1;
+            orderList = orderDao.selectOrderList(order_id,customer_id,sum_monetary,order_status,pay_status,startTime, endTime,currenPageNo,pageSize);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        PageUtils<Order> pageUtils = new PageUtils<>();
+        pageUtils.setList(orderList);
+        pageUtils.setCurrentPageNo(currenPageNo);
+        pageUtils.setPageSize(pageSize);
+        pageUtils.setTotalPageCount(totalPageCount);
+        pageUtils.setTotalPageSize(totalPageSize);
+        return pageUtils;
     }
 }
