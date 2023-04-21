@@ -59,4 +59,14 @@ public class OrderServiceImpl implements OrderService {
         }
         return -1;
     }
+
+    @Override
+    public int changeOrder(Date date_time, Double sum_monetary, Integer order_status, Integer pay_status) {
+        try {
+            return orderDao.changeOrder(date_time, sum_monetary, order_status, pay_status);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
 }

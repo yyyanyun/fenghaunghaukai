@@ -61,4 +61,28 @@ public class OrderServlet extends BaseServlet {
             resultVo.setData(false);
         }
     }
+
+    public void  changeOrder(HttpServletRequest request, HttpServletResponse response) throws ParseException {
+        ResultVo<Boolean> resultVo = new ResultVo<>();
+
+        String date_t = request.getParameter("date_time");
+        String sum_monetary = request.getParameter("sum_monetary");
+        String order_status = request.getParameter("order_status");
+        String pay_status = request.getParameter("pay_status");
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        Date date_time = sdf.parse(date_t);
+
+        int num = orderService.changeOrder(date_time,Double.parseDouble(sum_monetary),Integer.parseInt(order_status),Integer.parseInt(pay_status));
+
+        if (num>0){
+            resultVo.setCode(200);
+            resultVo.setMessage("成功");
+            resultVo.setData(true);
+        }else {
+            resultVo.setCode(500);
+            resultVo.setMessage("失败");
+            resultVo.setData(false);
+        }
+    }
 }

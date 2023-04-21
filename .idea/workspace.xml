@@ -6,10 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="修改了bug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/OrderDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/OrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/impl/OrderDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/impl/OrderDaoImpl.java" afterDir="false" />
+    <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="添加了增加订单功能">
       <change beforePath="$PROJECT_DIR$/src/com/fhhk/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/fhhk/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/service/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/fhhk/servlet/OrderServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/servlet/OrderServlet.java" afterDir="false" />
@@ -195,7 +192,7 @@
       <workItem from="1681983677006" duration="369000" />
       <workItem from="1681989577806" duration="3977000" />
       <workItem from="1682037007834" duration="14862000" />
-      <workItem from="1682064368042" duration="1506000" />
+      <workItem from="1682064368042" duration="2027000" />
     </task>
     <task id="LOCAL-00001" summary="增加订单模块">
       <created>1682046748437</created>
@@ -211,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682057167609</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加了增加订单功能">
+      <created>1682066130136</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682066130136</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,17 +238,18 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="增加订单模块" />
     <MESSAGE value="修改了bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改了bug" />
+    <MESSAGE value="添加了增加订单功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了增加订单功能" />
   </component>
   <component name="WindowStateProjectService">
     <state x="309" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1682056227173">
       <screen x="0" y="0" width="1707" height="912" />
     </state>
     <state x="309" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.912@0.0.1707.912" timestamp="1682056227173" />
-    <state x="659" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1682065886462">
+    <state x="659" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1682066160011">
       <screen x="0" y="0" width="1707" height="912" />
     </state>
-    <state x="659" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1707.912@0.0.1707.912" timestamp="1682065886462" />
+    <state x="659" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1707.912@0.0.1707.912" timestamp="1682066160011" />
     <state x="701" y="346" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1681990834408">
       <screen x="0" y="0" width="1707" height="912" />
     </state>
@@ -253,10 +258,10 @@
       <screen x="0" y="0" width="1707" height="912" />
     </state>
     <state x="638" y="341" width="431" height="239" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1707.912@0.0.1707.912" timestamp="1682052879539" />
-    <state x="493" y="44" key="CommitChangelistDialog2" timestamp="1682057167186">
+    <state x="493" y="44" key="CommitChangelistDialog2" timestamp="1682066129598">
       <screen x="0" y="0" width="1707" height="912" />
     </state>
-    <state x="493" y="44" key="CommitChangelistDialog2/0.0.1707.912@0.0.1707.912" timestamp="1682057167186" />
+    <state x="493" y="44" key="CommitChangelistDialog2/0.0.1707.912@0.0.1707.912" timestamp="1682066129598" />
     <state x="634" y="212" key="FileChooserDialogImpl" timestamp="1682065262007">
       <screen x="0" y="0" width="1707" height="912" />
     </state>
@@ -329,14 +334,14 @@
       <screen x="0" y="0" width="1707" height="912" />
     </state>
     <state x="334" y="31" key="SettingsEditor/0.0.1707.912@0.0.1707.912" timestamp="1682046130161" />
-    <state x="446" y="178" key="Vcs.Push.Dialog.v2" timestamp="1682057172924">
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2" timestamp="1682066132147">
       <screen x="0" y="0" width="1707" height="912" />
     </state>
-    <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.0.1707.912@0.0.1707.912" timestamp="1682057172924" />
-    <state x="650" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1682057141456">
+    <state x="446" y="178" key="Vcs.Push.Dialog.v2/0.0.1707.912@0.0.1707.912" timestamp="1682066132147" />
+    <state x="650" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1682066445672">
       <screen x="0" y="0" width="1707" height="912" />
     </state>
-    <state x="650" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.912@0.0.1707.912" timestamp="1682057141456" />
+    <state x="650" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1707.912@0.0.1707.912" timestamp="1682066445672" />
     <state x="241" y="67" key="new project wizard" timestamp="1681990804406">
       <screen x="0" y="0" width="1707" height="912" />
     </state>
