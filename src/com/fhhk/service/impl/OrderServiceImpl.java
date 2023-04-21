@@ -12,6 +12,7 @@ import com.fhhk.entity.Trolley;
 import com.fhhk.service.OrderService;
 
 import java.sql.SQLException;
+import java.util.Date;
 import java.util.List;
 
 public class OrderServiceImpl implements OrderService {
@@ -47,5 +48,15 @@ public class OrderServiceImpl implements OrderService {
             e.printStackTrace();
         }
         return orderList;
+    }
+
+    @Override
+    public int addOrder(Date date_time, Double sum_monetary) {
+        try {
+            return orderDao.addOrder(date_time,sum_monetary);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return -1;
     }
 }

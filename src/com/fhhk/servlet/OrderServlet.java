@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @WebServlet(name = "orderServlet",urlPatterns = "/orderServlet")
@@ -35,5 +38,27 @@ public class OrderServlet extends BaseServlet {
         }
 
         JsonUtils.toJson(resultVo,response);
+    }
+
+    public void  addOrder(HttpServletRequest request, HttpServletResponse response) throws ParseException {
+        ResultVo<Boolean> resultVo = new ResultVo<>();
+
+        String date_t = request.getParameter("date_time");
+        String sum_monetary = request.getParameter("sum_monetary");
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        Date date_time = sdf.parse(date_t);
+
+        int num = orderService.addOrder(date_time, Double.parseDouble(sum_monetary));
+
+        if (num>0){
+            resultVo.setCode(200);
+            resultVo.setMessage("成功");
+            resultVo.setData(true);
+        }else {
+            resultVo.setCode(500);
+            resultVo.setMessage("失败");
+            resultVo.setData(false);
+        }
     }
 }
