@@ -5,8 +5,10 @@ import com.fhhk.entity.Trolley;
 import com.fhhk.utils.DBUtils;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * @BelongsProject:fenghaunghaukai
@@ -27,8 +29,6 @@ public class TrolleyDaoImpl implements TrolleyDao {
      */
     @Override
     public Trolley selectTrolleyByExists(Integer customer_id, Integer service_id) throws SQLException {
-
-
         String sql = "SELECT * FROM trolley WHERE customer_id=? and service_id=? and order_id is null;";
         Object[] obj = {customer_id,service_id};
         Trolley trolley = qr.query(sql, new BeanHandler<>(Trolley.class), obj);
@@ -48,6 +48,12 @@ public class TrolleyDaoImpl implements TrolleyDao {
         return result;
     }
 
+    /**
+     * 修改
+     * @param trolley
+     * @return
+     * @throws SQLException
+     */
     @Override
     public int updateTrolley(Trolley trolley) throws SQLException {
 
@@ -58,9 +64,26 @@ public class TrolleyDaoImpl implements TrolleyDao {
     }
 
     @Override
-    public int deleteTrolley(Integer tid,Integer customer_id) {
+    public List<Trolley> selectTrolleyByCustomer_id(Integer customer_id) throws SQLException {
 
-        String sql = "DELETE FROM trolley WHERE 条件;";
-        return 0;
+        String sql = "SELECT * FROM trolley WHERE customer_id=?;";
+        List<Trolley> trolleyList = qr.query(sql, new BeanListHandler<Trolley>(Trolley.class), customer_id);
+        return trolleyList;
+    }
+
+    /**
+     * 删除
+     * @param tid
+     * @param customer_id
+     * @return
+     * @throws SQLException
+     */
+    @Override
+    public int deleteTrolley(Integer tid,Integer customer_id) throws SQLException {
+
+        String sql = "DELETE FROM trolley WHERE tid=? and customer_id=?;";
+        Object[] obj = {tid,customer_id};
+        int result = qr.update(sql, obj);
+        return result;
     }
 }

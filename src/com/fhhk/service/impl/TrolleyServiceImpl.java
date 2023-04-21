@@ -19,11 +19,22 @@ public class TrolleyServiceImpl implements TrolleyService {
     private TrolleyDao trolleyDao = new TrolleyDaoImpl();
     @Override
     public int addTrolley(Trolley trolley) {
+        int customer_id = trolley.getCustomer_id();
+        int service_id = trolley.getService_id();
+        int result = -1;
         try {
-            return trolleyDao.addTrolley(trolley);
+            Trolley exists = trolleyDao.selectTrolleyByExists(customer_id, service_id);
+            if (exists == null) {
+                //执行增加
+                 result = trolleyDao.addTrolley(trolley);
+            }else {
+                //执行修改
+                trolley.setTrolley_number(exists.getTrolley_number()+trolley.getTrolley_number());
+                 result = trolleyDao.updateTrolley(trolley);
+            }
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
-        return -1;
+        return result;
     }
 }
