@@ -94,7 +94,7 @@ public class UserServlet extends BaseServlet {
         String phone = req.getParameter("phone");
         String address = req.getParameter("address");
         LocalDateTime customer_date = LocalDateTime.parse(req.getParameter("customer_date"));
-        int number = Integer.parseInt(req.getParameter("number"));
+        int number = Integer.parseInt(req.getParameter("customer_number"));
         String remark = req.getParameter("remark");
         // 封装对象
         Customer c = new Customer(0,customer_name,customer_pwd,gender,age,phone,address,customer_date,number,remark);

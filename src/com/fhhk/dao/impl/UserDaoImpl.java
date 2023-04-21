@@ -38,8 +38,8 @@ public class UserDaoImpl implements UserDao {
     @Override
     public int addCustomer(Customer c) {
         int num = 0;
-        String sql = "INSERT INTO customer(customer_name,customer_pwd, gender, age, phone,address,customer_date,`number`,remark) VALUES (?,?,?,?,?,?,?,?,?);";
-        Object[] obj = {c.getCustomer_name(),c.getCustomer_pwd(),c.getGender(),c.getAge(),c.getPhone(),c.getAddress(),c.getCustomer_date(),c.getNumber(),c.getRemark()};
+        String sql = "INSERT INTO customer(customer_name,customer_pwd, gender, age, phone,address,customer_date,customer_number,remark) VALUES (?,?,?,?,?,?,?,?,?);";
+        Object[] obj = {c.getCustomer_name(),c.getCustomer_pwd(),c.getGender(),c.getAge(),c.getPhone(),c.getAddress(),c.getCustomer_date(),c.getCustomer_number(),c.getRemark()};
         try {
             num = qr.update(sql, obj);
         } catch (SQLException e) {
