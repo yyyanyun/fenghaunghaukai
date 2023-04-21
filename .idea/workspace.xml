@@ -6,23 +6,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/dao/ServiceDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/dao/impl/ServiceDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/entity/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/service/ServiceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/service/impl/ServiceServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/servlet/ServiceServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/servlet/StaffServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/text/demo.java" afterDir="false" />
+    <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="技师和 套餐  的 展示  和  根据id 查询">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/TechnicianDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/StaffDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/impl/TechnicianDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/impl/StaffDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/entity/Technician.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/entity/Staff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/service/TechnicianService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/service/StaffService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/service/impl/TechnicianServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/service/impl/StaffServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/utils/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/utils/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/StaffDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/StaffDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/impl/StaffDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/impl/StaffDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/entity/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/entity/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/service/StaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/service/StaffService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/service/impl/StaffServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/service/impl/StaffServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/servlet/StaffServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/servlet/StaffServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/text/demo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/text/demo.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,6 +210,14 @@
       <workItem from="1681983677006" duration="369000" />
       <workItem from="1681989900469" duration="2076000" />
     </task>
+    <task id="LOCAL-00001" summary="技师和 套餐  的 展示  和  根据id 查询">
+      <created>1682075836038</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682075836038</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,5 +248,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="技师和 套餐  的 展示  和  根据id 查询" />
+    <option name="LAST_COMMIT_MESSAGE" value="技师和 套餐  的 展示  和  根据id 查询" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassCastException" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -6,11 +6,13 @@ import com.fhhk.entity.Staff;
 import com.fhhk.service.StaffService;
 import com.fhhk.service.impl.StaffServiceImpl;
 import com.fhhk.utils.JsonUtils;
+import com.fhhk.utils.PageUtils;
 import com.fhhk.utils.ResultVo;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.sql.SQLException;
 import java.util.List;
 
 @WebServlet(name = "staffServlet" ,urlPatterns = "/staffServlet")
@@ -70,5 +72,36 @@ public class StaffServlet extends BaseServlet{
         JsonUtils.toJson(listResultVo,resp);
     }
 
+    public void selectStartList(HttpServletRequest res , HttpServletResponse resp) throws SQLException {
+
+        //获取前端 数据
+        String staff_name = res.getParameter("staff_name");
+
+        String gender = res.getParameter("gender");
+
+        Integer age = null;
+        String ageStr = res.getParameter("age");
+        String currentPageNo = res.getParameter("currentPageNo");
+
+        String PageSize = res.getParameter("PageSize");
+
+        if (ageStr!=null){
+          age = Integer.parseInt(ageStr);
+        }
+
+        ResultVo<List<Staff>> resultVo = new ResultVo<>();
+        PageUtils<Staff> pageUtils = staffService.selectStartList(staff_name, gender, age, currentPageNo, PageSize);
+
+        if (pageUtils.getList()!=null && pageUtils.getList().size()>0){
+            resultVo.setMessage("成功");
+            resultVo.setCode(200);
+            resultVo.setData(pageUtils.getList());
+        }else {
+            resultVo.setMessage("失败");
+            resultVo.setCode(500);
+            resultVo.setData(null);
+        }
+        JsonUtils.toJson(resultVo,resp);
+    }
 
 }

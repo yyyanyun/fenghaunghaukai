@@ -3,6 +3,8 @@ package com.fhhk.entity;
 import java.io.Serializable;
 
 public class Staff implements Serializable {
+    private String staff_name;
+
     private String  staff_id;
     //技师 的类别
     private String  gender;
@@ -16,12 +18,29 @@ public class Staff implements Serializable {
     public Staff() {
     }
 
-    public Staff(String staff_id, String gender, int age, String photo, String status) {
+    public Staff(String staff_name, String staff_id, String gender, int age, String photo, String status) {
+        this.staff_name = staff_name;
         this.staff_id = staff_id;
         this.gender = gender;
         this.age = age;
         this.photo = photo;
         this.status = status;
+    }
+
+    /**
+     * 获取
+     * @return staff_name
+     */
+    public String getStaff_name() {
+        return staff_name;
+    }
+
+    /**
+     * 设置
+     * @param staff_name
+     */
+    public void setStaff_name(String staff_name) {
+        this.staff_name = staff_name;
     }
 
     /**
@@ -105,6 +124,6 @@ public class Staff implements Serializable {
     }
 
     public String toString() {
-        return "Staff{staff_id = " + staff_id + ", gender = " + gender + ", age = " + age + ", photo = " + photo + ", status = " + status + "}";
+        return "Staff{staff_name = " + staff_name + ", staff_id = " + staff_id + ", gender = " + gender + ", age = " + age + ", photo = " + photo + ", status = " + status + "}";
     }
 }
