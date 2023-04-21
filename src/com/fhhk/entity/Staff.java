@@ -7,7 +7,7 @@ import java.io.Serializable;
  * @BelongsPackage:com.fhhk.entity
  * @Author:LSL
  * @CreateTime:2023/4/21
- * @Description:TODO
+ * @Description:TODO 技师类
  * @Version: 1.0
  */
 public class Staff implements Serializable {
