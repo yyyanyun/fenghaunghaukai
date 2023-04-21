@@ -13,4 +13,6 @@ public interface OrderDao {
     int addOrder(Date date_time,Double sum_monetary) throws SQLException;
     //更改订单信息
     int changeOrder(Date date_time,Double sum_monetary,Integer order_status,Integer pay_status) throws SQLException;
+
+    int delOrder(Integer order_id) throws SQLException;
 }

@@ -85,4 +85,22 @@ public class OrderServlet extends BaseServlet {
             resultVo.setData(false);
         }
     }
+
+    public void  delOrder(HttpServletRequest request, HttpServletResponse response){
+        ResultVo<Boolean> resultVo = new ResultVo<>();
+
+        String order_id = request.getParameter("order_id");
+
+        int num = orderService.delOrder(Integer.parseInt(order_id));
+
+        if (num>0){
+            resultVo.setCode(200);
+            resultVo.setMessage("成功");
+            resultVo.setData(true);
+        }else {
+            resultVo.setCode(500);
+            resultVo.setMessage("失败");
+            resultVo.setData(false);
+        }
+    }
 }

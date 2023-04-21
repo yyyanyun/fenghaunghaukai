@@ -11,4 +11,6 @@ public interface OrderService {
     int addOrder(Date date_time, Double sum_monetary);
 
     int changeOrder(Date date_time,Double sum_monetary,Integer order_status,Integer pay_status);
+
+    int delOrder(Integer order_id);
 }

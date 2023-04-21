@@ -69,4 +69,14 @@ public class OrderServiceImpl implements OrderService {
         }
         return -1;
     }
+
+    @Override
+    public int delOrder(Integer order_id) {
+        try {
+            return orderDao.delOrder(order_id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return -1;
+    }
 }

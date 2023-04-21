@@ -38,4 +38,12 @@ public class OrderDaoImpl implements OrderDao {
         int num = qr.update(sql,date_time,sum_monetary,order_status,pay_status);
         return num;
     }
+
+    @Override
+    public int delOrder(Integer order_id) throws SQLException {
+        QueryRunner qr = DBUtils.DB.getQr();
+        String sql = "DELETE FROM 'order' WHERE order_id=?";
+        int num = qr.update(sql,order_id);
+        return num;
+    }
 }
