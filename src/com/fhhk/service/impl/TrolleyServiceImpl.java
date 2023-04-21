@@ -1,9 +1,9 @@
 package com.fhhk.service.impl;
 
-import com.fhhk.dao.ServiceDao;
-import com.fhhk.dao.TrolleyDao;
-import com.fhhk.dao.impl.ServiceDaoImpl;
-import com.fhhk.dao.impl.TrolleyDaoImpl;
+import com.fhhk.dao.ServiceDao01;
+import com.fhhk.dao.TrolleyDao01;
+import com.fhhk.dao.impl.ServiceDaoImpl01;
+import com.fhhk.dao.impl.TrolleyDaoImpl01;
 import com.fhhk.entity.Service;
 import com.fhhk.entity.Trolley;
 import com.fhhk.service.TrolleyService;
@@ -20,8 +20,8 @@ import java.util.List;
  * @Version: 1.0
  */
 public class TrolleyServiceImpl implements TrolleyService {
-    private TrolleyDao trolleyDao = new TrolleyDaoImpl();
-    private ServiceDao serviceDao = new ServiceDaoImpl();
+    private TrolleyDao01 trolleyDao = new TrolleyDaoImpl01();
+    private ServiceDao01 serviceDao = new ServiceDaoImpl01();
     @Override
     public int addTrolley(Trolley trolley) {
         int customer_id = trolley.getCustomer_id();

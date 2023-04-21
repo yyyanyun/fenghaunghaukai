@@ -1,6 +1,6 @@
 package com.fhhk.dao.impl;
 
-import com.fhhk.dao.ServiceDao;
+import com.fhhk.dao.ServiceDao01;
 import com.fhhk.entity.Service;
 import com.fhhk.utils.DBUtils;
 import org.apache.commons.dbutils.handlers.BeanHandler;
@@ -15,7 +15,7 @@ import java.sql.SQLException;
  * @Description:TODO
  * @Version: 1.0
  */
-public class ServiceDaoImpl implements ServiceDao {
+public class ServiceDaoImpl01 implements ServiceDao01 {
     @Override
     public Service selectByService_id(Integer service_id) throws SQLException {
 

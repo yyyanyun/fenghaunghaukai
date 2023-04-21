@@ -9,15 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="添加了购物车添加的功能">
+    <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="添加了购物车查询，删除的功能，（条件需求添加了查询服务表的方法）">
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/dao/ServiceDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/dao/impl/ServiceDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/entity/Trolley.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/entity/Trolley.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/service/TrolleyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/service/TrolleyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/ServiceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/ServiceDao01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/TrolleyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/TrolleyDao01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/impl/ServiceDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/impl/ServiceDaoImpl01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/impl/TrolleyDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/impl/TrolleyDaoImpl01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/fhhk/service/impl/TrolleyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/service/impl/TrolleyServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/servlet/TrolleyServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/servlet/TrolleyServlet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +182,7 @@
       <option name="presentableId" value="Default" />
       <updated>1681983675630</updated>
       <workItem from="1681983677006" duration="369000" />
-      <workItem from="1682063564935" duration="13542000" />
+      <workItem from="1682063564935" duration="15206000" />
     </task>
     <task id="LOCAL-00001" summary="新添加了一个分支lsl">
       <created>1682065598592</created>
@@ -220,11 +219,29 @@
       <option name="project" value="LOCAL" />
       <updated>1682078363023</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="添加了购物车查询，删除的功能，（条件需求添加了查询服务表的方法）">
+      <created>1682080219189</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682080219189</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -243,6 +260,7 @@
     <MESSAGE value="添加了购物车类（映射了服务类），服务实体类（映射了技师类），技师实体类" />
     <MESSAGE value="添加了dao层部分方法" />
     <MESSAGE value="添加了购物车添加的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加了购物车添加的功能" />
+    <MESSAGE value="添加了购物车查询，删除的功能，（条件需求添加了查询服务表的方法）" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加了购物车查询，删除的功能，（条件需求添加了查询服务表的方法）" />
   </component>
 </project>

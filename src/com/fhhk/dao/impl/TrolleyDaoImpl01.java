@@ -1,6 +1,6 @@
 package com.fhhk.dao.impl;
 
-import com.fhhk.dao.TrolleyDao;
+import com.fhhk.dao.TrolleyDao01;
 import com.fhhk.entity.Trolley;
 import com.fhhk.utils.DBUtils;
 import org.apache.commons.dbutils.QueryRunner;
@@ -18,7 +18,7 @@ import java.util.List;
  * @Description:TODO
  * @Version: 1.0
  */
-public class TrolleyDaoImpl implements TrolleyDao {
+public class TrolleyDaoImpl01 implements TrolleyDao01 {
     private QueryRunner qr = DBUtils.DB.getQr();
 
     /**
