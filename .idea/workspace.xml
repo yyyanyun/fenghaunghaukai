@@ -9,23 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="变更">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/dao/StaffDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/dao/impl/StaffDaoImpI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/entity/Service.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/entity/Staff.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/service/StaffService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/service/impl/StaffServiceImpI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/servlet/StaffServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/lib/lombok.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fenghaunghaukai.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fenghaunghaukai.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/utils/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/utils/db.properties" afterDir="false" />
-    </list>
+    <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="技师增删改查" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -195,8 +179,16 @@
       <workItem from="1681992005252" duration="853000" />
       <workItem from="1682038308037" duration="1505000" />
       <workItem from="1682045997890" duration="1005000" />
-      <workItem from="1682051251352" duration="13884000" />
+      <workItem from="1682051251352" duration="14185000" />
     </task>
+    <task id="LOCAL-00001" summary="技师增删改查">
+      <created>1682065646746</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682065646746</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,5 +207,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="技师增删改查" />
+    <option name="LAST_COMMIT_MESSAGE" value="技师增删改查" />
   </component>
 </project>
