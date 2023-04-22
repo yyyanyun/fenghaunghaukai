@@ -7,6 +7,7 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class StaffDaoImpI implements StaffDao {
 
@@ -60,6 +61,26 @@ public class StaffDaoImpI implements StaffDao {
         String sql = "select * from staff where  staff_id =?";
         Staff query = qr.query(sql, new BeanHandler<Staff>(Staff.class), staff_id);
         return query;
+    }
+
+    @Override
+    public List<Staff> selectAllStaff() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Staff selectByStaff_id(int staff_id) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Integer selectStaffCount(String staff_name, String gender, Integer age) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public List<Staff> selectStartList(String staff_name, String gender, Integer age, Integer currentPageNo, Integer PageSize) throws SQLException {
+        return null;
     }
 
 

@@ -15,6 +15,31 @@ import java.util.List;
 public class StaffDaoImpl implements StaffDao {
 
     @Override
+    public int addStaff(Staff staff) throws SQLException {
+        return 0;
+    }
+
+    @Override
+    public int deleteStaff(String staff_id) throws SQLException {
+        return 0;
+    }
+
+    @Override
+    public Staff goUpdateStaff(int staff_id) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public int updateStaff(Staff staff, int staff_id) throws SQLException {
+        return 0;
+    }
+
+    @Override
+    public Staff selectByIdStaff(int staff_id) throws SQLException {
+        return null;
+    }
+
+    @Override
     public List<Staff> selectAllStaff() throws SQLException {
         QueryRunner qr = DBUtils.DB.getQr();
         String sql = "select * from staff";

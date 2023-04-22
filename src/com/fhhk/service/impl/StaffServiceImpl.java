@@ -13,6 +13,31 @@ public class StaffServiceImpl implements StaffService {
     private StaffDao staffDao = new StaffDaoImpl();
 
     @Override
+    public int addStaff(Staff staff) {
+        return 0;
+    }
+
+    @Override
+    public int deleteStaff(String staff_id) throws SQLException {
+        return 0;
+    }
+
+    @Override
+    public Staff goUpdateStaff(int staff_id) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public int updateStaff(Staff staff, int staff_id) throws SQLException {
+        return 0;
+    }
+
+    @Override
+    public Staff selectByIdStaff(int staff_id) throws SQLException {
+        return null;
+    }
+
+    @Override
     public List<Staff> selectAllStaff() {
         try {
             return staffDao.selectAllStaff();

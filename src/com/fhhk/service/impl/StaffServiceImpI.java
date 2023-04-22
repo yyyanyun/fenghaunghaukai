@@ -4,8 +4,10 @@ import com.fhhk.dao.StaffDao;
 import com.fhhk.dao.impl.StaffDaoImpI;
 import com.fhhk.entity.Staff;
 import com.fhhk.service.StaffService;
+import com.fhhk.utils.PageUtils;
 
 import java.sql.SQLException;
+import java.util.List;
 
 public class StaffServiceImpI implements StaffService {
     private StaffDao staffDao = new StaffDaoImpI();
@@ -43,6 +45,21 @@ public class StaffServiceImpI implements StaffService {
     @Override
     public Staff selectByIdStaff(int staff_id) throws SQLException {
         return staffDao.selectByIdStaff(staff_id);
+    }
+
+    @Override
+    public List<Staff> selectAllStaff() {
+        return null;
+    }
+
+    @Override
+    public Staff selectByStaff_id(int staff_id) {
+        return null;
+    }
+
+    @Override
+    public PageUtils<Staff> selectStartList(String staff_name, String gender, Integer age, String currentPageNoStr, String PageSizeStr) throws SQLException {
+        return null;
     }
 
 
