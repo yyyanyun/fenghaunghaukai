@@ -1,6 +1,10 @@
 package com.fhhk.entity;
 
+
+import java.util.List;
+
 public class VipUser {
+    private int vipId;
     private int customer_id;
     private String vip_level;
     private double decimal;
@@ -8,6 +12,24 @@ public class VipUser {
     private double vip_money;
     private  String datetime;
     private  String customer_name;
+    //装order表的记录
+    private List<Order> orderList;
+
+    public int getVipId() {
+        return vipId;
+    }
+
+    public void setVipId(int vipId) {
+        this.vipId = vipId;
+    }
+
+    public List<Order> getOrderList() {
+        return orderList;
+    }
+
+    public void setOrderList(List<Order> orderList) {
+        this.orderList = orderList;
+    }
 
     public VipUser() {
     }
