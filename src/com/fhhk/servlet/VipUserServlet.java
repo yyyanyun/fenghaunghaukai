@@ -1,9 +1,13 @@
 package com.fhhk.servlet;
 
+import com.fhhk.entity.Customer;
 import com.fhhk.entity.VipUser;
+import com.fhhk.service.CustomerService;
 import com.fhhk.service.VipUseService;
+import com.fhhk.service.impl.CustomerServiceimpl;
 import com.fhhk.service.impl.VipUserServiceimpl;
 import com.fhhk.utils.JsonUtils;
+import com.fhhk.utils.PageUtils;
 import com.fhhk.utils.ResultVo;
 
 import javax.servlet.annotation.WebServlet;
@@ -76,7 +80,27 @@ public class VipUserServlet extends BaseServlet{
         }
         JsonUtils.toJson(rs,resp);
 
-
-
     }
+    public  void  selectTt(HttpServletRequest req, HttpServletResponse resp){
+        CustomerService customerService=new CustomerServiceimpl();
+        String currentPageNo = req.getParameter("currentPageNo");
+        String pageSize = req.getParameter("pageSize");
+        String name = req.getParameter("customer_name");
+        String startTime = req.getParameter("startTime");
+        String endTime = req.getParameter("endTime");
+        PageUtils<Customer> pageUtils = customerService.selectCustomerpage(name, startTime, endTime, currentPageNo, pageSize);
+        ResultVo<PageUtils> resultVo = new ResultVo<>();
+        if (pageUtils !=null){
+            resultVo.setData(pageUtils);
+            resultVo.setMessage("成功");
+            resultVo.setCode(200);
+        }else {
+            resultVo.setData(null);
+            resultVo.setMessage("失败");
+            resultVo.setCode(500);
+        }
+        JsonUtils.toJson(resultVo,resp);
+    }
+
+
 }
