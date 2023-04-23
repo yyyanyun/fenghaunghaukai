@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="生成验证码">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/dao/PayDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/fhhk/service/PayService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/fhhk/service/impl/PayServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/fhhk/servlet/PayServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/fhhk/test/PsTest01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/fhhk/test/PsTest02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/fhhk/test/PsTest03.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/utils/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/utils/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/impl/PayDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/impl/PayDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/entity/VipUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/entity/VipUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/service/impl/StaffServiceImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="merge" />
+        <entry key="$PROJECT_DIR$" value="ps" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,6 +55,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -57,7 +66,46 @@
       <recent name="com.fhhk.servlet" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.2914">
+    <configuration name="PsTest01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fhhk.test.PsTest01" />
+      <module name="fenghaunghaukai" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fhhk.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PsTest02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fhhk.test.PsTest02" />
+      <module name="fenghaunghaukai" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fhhk.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PsTest03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.fhhk.test.PsTest03" />
+      <module name="fenghaunghaukai" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.fhhk.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -239,6 +287,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Tomcat Server.Tomcat 8.5.2914" />
+      <item itemvalue="应用程序.PsTest01" />
+      <item itemvalue="应用程序.PsTest02" />
+      <item itemvalue="应用程序.PsTest03" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -250,7 +304,37 @@
       <updated>1681983675630</updated>
       <workItem from="1681983677006" duration="369000" />
       <workItem from="1681989900469" duration="2076000" />
+      <workItem from="1682209762104" duration="2044000" />
     </task>
+    <task id="LOCAL-00001" summary="试验上传">
+      <created>1682133978692</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682133978693</updated>
+    </task>
+    <task id="LOCAL-00002" summary="发现bug：运行时报错，ServiceDaoImpl类中selectByServiceId方法缺少返回值">
+      <created>1682142511036</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682142511036</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Staff的dao和service层中的impl层有几个方法没有实现，我空实现了">
+      <created>1682143039146</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682143039146</updated>
+    </task>
+    <task id="LOCAL-00004" summary="dao层：增pay表、改(查)VIP和order表方法">
+      <created>1682167967191</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682167967191</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +345,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/merge" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -270,5 +366,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="试验上传" />
+    <MESSAGE value="发现bug：运行时报错，ServiceDaoImpl类中selectByServiceId方法缺少返回值" />
+    <MESSAGE value="Staff的dao和service层中的impl层有几个方法没有实现，我空实现了" />
+    <MESSAGE value="dao层：增pay表、改(查)VIP和order表方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="dao层：增pay表、改(查)VIP和order表方法" />
   </component>
 </project>

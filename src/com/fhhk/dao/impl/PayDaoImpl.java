@@ -28,7 +28,7 @@ public class PayDaoImpl implements PayDao {
         String endTime = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date());
         //完成时间+订单状态
         String sql = "update `order` set end_time=?,order_status=? where order_id=?";
-        Object[] obj = {endTime,"已完成",order.getOrder_id()};
+        Object[] obj = {endTime,1,order.getOrder_id()};
         int i = qr.update(sql,obj);
         return i;
     }
@@ -37,14 +37,14 @@ public class PayDaoImpl implements PayDao {
     @Override
     public VipUser selectVip(VipUser vipUser) throws SQLException {
         String sql = "select * from vip_privilege where vip_id=?;";
-        VipUser vu = qr.query(sql, new BeanHandler<>(VipUser.class), vipUser.getVipId());
+        VipUser vu = qr.query(sql, new BeanHandler<>(VipUser.class), vipUser.getVip_id());
         return vu;
     }
 
     @Override
     public int updateVip(VipUser vipUser) throws SQLException {
         String sql = "update vip_privilege set free_count=?,vip_money=? where vip_id=?";
-        Object[] obj = {vipUser.getFree_count(),vipUser.getVip_money(),vipUser.getVipId()};
+        Object[] obj = {vipUser.getFree_count(),vipUser.getVip_money(),vipUser.getVip_id()};
         int i = qr.update(sql, obj);
         return i;
     }
