@@ -9,12 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="修正合并错误2">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+    <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="修正合并错误3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/TrolleyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/TrolleyDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/impl/TrolleyDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/impl/TrolleyDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/text/demo.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +57,6 @@
     "Git.Branch.Popup.ShowAllRemotes": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/Program Files/tomcat-8.5.87/apache-tomcat-8.5.87/lib",
     "node.js.detected.package.eslint": "true",
@@ -221,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682209973051</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="修正合并错误3">
+      <created>1682211642193</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682211642193</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +288,7 @@
     <MESSAGE value="增加注册功能" />
     <MESSAGE value="增加注释" />
     <MESSAGE value="修正合并错误2" />
-    <option name="LAST_COMMIT_MESSAGE" value="修正合并错误2" />
+    <MESSAGE value="修正合并错误3" />
+    <option name="LAST_COMMIT_MESSAGE" value="修正合并错误3" />
   </component>
 </project>
