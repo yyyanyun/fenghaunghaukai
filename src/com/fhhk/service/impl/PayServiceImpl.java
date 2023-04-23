@@ -32,7 +32,6 @@ public class PayServiceImpl implements PayService {
         }
         //得到order对象
         Order order = orderList.get(0);
-        System.out.println("订单表数据"+order.toString());
         //获取order表中元素
         int vipId = order.getVip_id();//会员id
         int customer_id = order.getCustomer_id();//客户id
@@ -68,13 +67,13 @@ public class PayServiceImpl implements PayService {
                     price = price-vip_money;
                     vu.setVip_money(0);
                 }else {
-                    //价格少于会员余额，会员余额减少
+                    //价格少于会员余额，会员余额减少，价格为0
                     vu.setVip_money(vip_money-price);
+                    price=0;
                 }
             }
 
         }
-        System.out.println("会员表数据:"+vu.toString());
 
         //一、增加支付表
         Pay pay = new Pay();

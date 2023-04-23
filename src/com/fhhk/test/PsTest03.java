@@ -16,7 +16,7 @@ import java.util.List;
 public class PsTest03 {
     public static void main(String[] args) throws SQLException {
         PayService ps = new PayServiceImpl();
-        Double aDouble = ps.payPrice(3);
+        Double aDouble = ps.payPrice(4);
         System.out.println("价格："+aDouble);
     }
 }

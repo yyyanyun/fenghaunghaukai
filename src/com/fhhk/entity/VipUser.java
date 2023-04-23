@@ -10,21 +10,21 @@ public class VipUser {
     private double discount;
     private int free_count;
     private double vip_money;
-    private  String datetime;
+    private  String vip_createdate;
     private  String customer_name;
 
 
     public VipUser() {
     }
 
-    public VipUser(int vip_id, int customer_id, String vip_level, double discount, int free_count, double vip_money, String datetime, String customer_name) {
+    public VipUser(int vip_id, int customer_id, String vip_level, double discount, int free_count, double vip_money, String vip_createdate, String customer_name) {
         this.vip_id = vip_id;
         this.customer_id = customer_id;
         this.vip_level = vip_level;
         this.discount = discount;
         this.free_count = free_count;
         this.vip_money = vip_money;
-        this.datetime = datetime;
+        this.vip_createdate = vip_createdate;
         this.customer_name = customer_name;
     }
 
@@ -126,18 +126,18 @@ public class VipUser {
 
     /**
      * 获取
-     * @return datetime
+     * @return vip_createdate
      */
-    public String getDatetime() {
-        return datetime;
+    public String getVip_createdate() {
+        return vip_createdate;
     }
 
     /**
      * 设置
-     * @param datetime
+     * @param vip_createdate
      */
-    public void setDatetime(String datetime) {
-        this.datetime = datetime;
+    public void setVip_createdate(String vip_createdate) {
+        this.vip_createdate = vip_createdate;
     }
 
     /**
@@ -157,6 +157,6 @@ public class VipUser {
     }
 
     public String toString() {
-        return "VipUser{vip_id = " + vip_id + ", customer_id = " + customer_id + ", vip_level = " + vip_level + ", discount = " + discount + ", free_count = " + free_count + ", vip_money = " + vip_money + ", datetime = " + datetime + ", customer_name = " + customer_name + "}";
+        return "VipUser{vip_id = " + vip_id + ", customer_id = " + customer_id + ", vip_level = " + vip_level + ", discount = " + discount + ", free_count = " + free_count + ", vip_money = " + vip_money + ", vip_createdate = " + vip_createdate + ", customer_name = " + customer_name + "}";
     }
 }

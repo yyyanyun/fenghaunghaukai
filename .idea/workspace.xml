@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="fenghaunghaukai:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="生成验证码">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib__2_.xml" afterDir="false" />
+    <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="修正合并错误2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/entity/VipUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/entity/VipUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/service/impl/PayServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/service/impl/PayServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/servlet/PayServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/servlet/PayServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/fhhk/test/PsTest03.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/test/PsTest03.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +34,13 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
   <component name="ProjectId" id="2OgYQCzgVIFr1xguLR13bqBw448" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -42,7 +57,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="E:/QianFengJava2301/SystemCourse/Code/TomCat/apache-tomcat-8.5.29/lib" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -56,7 +71,7 @@
       <recent name="com.fhhk.servlet" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.PsTest03">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.2914">
     <configuration name="PsTest01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.fhhk.test.PsTest01" />
       <module name="fenghaunghaukai" />
@@ -96,15 +111,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -301,6 +314,7 @@
       <workItem from="1681983677006" duration="369000" />
       <workItem from="1681989900469" duration="2076000" />
       <workItem from="1682209762104" duration="2044000" />
+      <workItem from="1682213687878" duration="2940000" />
     </task>
     <task id="LOCAL-00001" summary="试验上传">
       <created>1682133978692</created>
@@ -337,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682212490907</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="修正合并错误2">
+      <created>1682213543081</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682213543081</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,6 +395,7 @@
     <MESSAGE value="Staff的dao和service层中的impl层有几个方法没有实现，我空实现了" />
     <MESSAGE value="dao层：增pay表、改(查)VIP和order表方法" />
     <MESSAGE value="修正合并错误" />
-    <option name="LAST_COMMIT_MESSAGE" value="修正合并错误" />
+    <MESSAGE value="修正合并错误2" />
+    <option name="LAST_COMMIT_MESSAGE" value="修正合并错误2" />
   </component>
 </project>
