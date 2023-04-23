@@ -18,4 +18,29 @@ public class VipUserServiceimpl implements VipUseService {
         }
         return selectvip;
     }
+
+    @Override
+    public Integer updatevip(VipUser vipUser) {
+        VipUserDao vus=new VipUserDaoimpl();
+        Integer updatevip = null;
+        try {
+            updatevip = vus.updatevip(vipUser);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return updatevip;
+    }
+
+    @Override
+    public Integer delectVip(String tid) {
+        VipUserDao vus=new VipUserDaoimpl();
+        Integer integer = null;
+        try {
+            integer = vus.delectVip(tid);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        return integer;
+    }
 }
