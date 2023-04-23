@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface VipUserDao {
    VipUser selectvip(Integer customerid) throws SQLException;
+   Integer updatevip(VipUser vipUser) throws SQLException;
+   Integer delectVip(String tid) throws SQLException;
 }

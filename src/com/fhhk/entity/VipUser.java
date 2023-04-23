@@ -3,22 +3,22 @@ package com.fhhk.entity;
 public class VipUser {
     private int customer_id;
     private String vip_level;
-    private double decimal;
+    private double discount;
     private int free_count;
     private double vip_money;
-    private  String datetime;
+    private  String vip_createdate;
     private  String customer_name;
 
     public VipUser() {
     }
 
-    public VipUser(int customer_id, String vip_level, double decimal, int free_count, double vip_money, String datetime, String customer_name) {
+    public VipUser(int customer_id, String vip_level, double discount, int free_count, double vip_money, String vip_createdate, String customer_name) {
         this.customer_id = customer_id;
         this.vip_level = vip_level;
-        this.decimal = decimal;
+        this.discount = discount;
         this.free_count = free_count;
         this.vip_money = vip_money;
-        this.datetime = datetime;
+        this.vip_createdate = vip_createdate;
         this.customer_name = customer_name;
     }
 
@@ -38,12 +38,12 @@ public class VipUser {
         this.vip_level = vip_level;
     }
 
-    public double getDecimal() {
-        return decimal;
+    public double getDiscount() {
+        return discount;
     }
 
-    public void setDecimal(double decimal) {
-        this.decimal = decimal;
+    public void setDiscount(double discount) {
+        this.discount = discount;
     }
 
     public int getFree_count() {
@@ -62,12 +62,12 @@ public class VipUser {
         this.vip_money = vip_money;
     }
 
-    public String getDatetime() {
-        return datetime;
+    public String getVip_createdate() {
+        return vip_createdate;
     }
 
-    public void setDatetime(String datetime) {
-        this.datetime = datetime;
+    public void setVip_createdate(String vip_createdate) {
+        this.vip_createdate = vip_createdate;
     }
 
     public String getCustomer_name() {
@@ -83,10 +83,10 @@ public class VipUser {
         return "VipUser{" +
                 "customer_id=" + customer_id +
                 ", vip_level='" + vip_level + '\'' +
-                ", decimal=" + decimal +
+                ", discount=" + discount +
                 ", free_count=" + free_count +
                 ", vip_money=" + vip_money +
-                ", datetime='" + datetime + '\'' +
+                ", vip_createdate='" + vip_createdate + '\'' +
                 ", customer_name='" + customer_name + '\'' +
                 '}';
     }

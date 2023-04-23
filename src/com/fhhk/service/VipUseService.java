@@ -6,4 +6,8 @@ import java.util.List;
 
 public interface VipUseService {
     VipUser selectvip(Integer customerid);
+
+    Integer updatevip(VipUser vipUser);
+    Integer delectVip(String tid);
+
 }
