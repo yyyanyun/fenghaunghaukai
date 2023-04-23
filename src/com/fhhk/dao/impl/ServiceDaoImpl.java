@@ -19,8 +19,9 @@ public class ServiceDaoImpl implements ServiceDao {
     public Service selectByServiceId(Integer service_id) throws SQLException {
         QueryRunner qr = DBUtils.DB.getQr();
         String sql = "SELECT * FROM service WHERE service_id=?";
-        Service service = qr.query(sql,new BeanHandler<Service>(Service.class),service_id);
-
+        Service service = qr.query(sql, new BeanHandler<Service>(Service.class), service_id);
+        return service;
+    }
     @Override
     public List<Service> selectAllService() throws SQLException {
         QueryRunner qr = DBUtils.DB.getQr();
