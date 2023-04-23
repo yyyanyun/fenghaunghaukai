@@ -1,25 +1,33 @@
 package com.fhhk.entity;
 
-import lombok.Data;
-
 import java.io.Serializable;
 
-
+/**
+ * @BelongsProject:fenghaunghaukai
+ * @BelongsPackage:com.fhhk.entity
+ * @Author:LSL
+ * @CreateTime:2023/4/21
+ * @Description:TODO 服务类
+ * @Version: 1.0
+ */
 public class Service implements Serializable {
+    private int service_id;//服务id
+    private String service_name;//服务名称
+    private double price;//价格
+    private int duration;//时长
+    //添加技师映射
+    private Staff staff;
 
-    private int service_id;
-    private String service_name;
-    private double price;
-    private int duration; //时长
 
     public Service() {
     }
 
-    public Service(int service_id, String service_name, double price, int duration) {
+    public Service(int service_id, String service_name, double price, int duration, Staff staff) {
         this.service_id = service_id;
         this.service_name = service_name;
         this.price = price;
         this.duration = duration;
+        this.staff = staff;
     }
 
     /**
@@ -86,7 +94,23 @@ public class Service implements Serializable {
         this.duration = duration;
     }
 
+    /**
+     * 获取
+     * @return staff
+     */
+    public Staff getStaff() {
+        return staff;
+    }
+
+    /**
+     * 设置
+     * @param staff
+     */
+    public void setStaff(Staff staff) {
+        this.staff = staff;
+    }
+
     public String toString() {
-        return "Service{service_id = " + service_id + ", service_name = " + service_name + ", price = " + price + ", duration = " + duration + "}";
+        return "Service{service_id = " + service_id + ", service_name = " + service_name + ", price = " + price + ", duration = " + duration + ", staff = " + staff + "}";
     }
 }

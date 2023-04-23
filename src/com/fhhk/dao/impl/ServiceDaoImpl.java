@@ -22,7 +22,6 @@ public class ServiceDaoImpl implements ServiceDao {
         Service service = qr.query(sql, new BeanHandler<Service>(Service.class), service_id);
         return service;
     }
-
     @Override
     public List<Service> selectAllService() throws SQLException {
         QueryRunner qr = DBUtils.DB.getQr();
