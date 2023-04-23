@@ -26,7 +26,7 @@ public class TrolleyDaoImpl implements TrolleyDao {
  * @Description:TODO
  * @Version: 1.0
  */
-public class TrolleyDaoImpl implements TrolleyDao {
+
     private QueryRunner qr = DBUtils.DB.getQr();
 
     /**

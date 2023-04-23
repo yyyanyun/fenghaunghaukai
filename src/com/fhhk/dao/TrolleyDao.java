@@ -6,11 +6,9 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface TrolleyDao {
-    List<Trolley> selectByOrderId(Integer order_id) throws SQLException;
-
-public interface TrolleyDao {
     //查询购物车中是否有该服务 根据customer_id，service_id 查询单条
     Trolley selectTrolleyByExists(Integer customer_id,Integer service_id) throws SQLException;
+    List<Trolley> selectByOrderId(Integer order_id) throws SQLException;
 
     //购物车添加服务
     int addTrolley(Trolley trolley) throws SQLException;
