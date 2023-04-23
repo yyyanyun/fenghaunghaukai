@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f63f6f8-97f3-4b40-b9ec-57bba72d0d5d" name="变更" comment="生成验证码">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/service/PayService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/service/impl/PayServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/servlet/PayServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/test/PsTest01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/test/PsTest02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/fhhk/test/PsTest03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib__2_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/dao/impl/PayDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/dao/impl/PayDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/entity/VipUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/fhhk/entity/VipUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/fhhk/service/impl/StaffServiceImpl.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +56,7 @@
       <recent name="com.fhhk.servlet" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.2914">
+  <component name="RunManager" selected="应用程序.PsTest03">
     <configuration name="PsTest01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.fhhk.test.PsTest01" />
       <module name="fenghaunghaukai" />
@@ -293,6 +283,12 @@
       <item itemvalue="应用程序.PsTest02" />
       <item itemvalue="应用程序.PsTest03" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.PsTest03" />
+        <item itemvalue="应用程序.PsTest01" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -334,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682167967191</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="修正合并错误">
+      <created>1682212490907</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682212490907</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,6 +373,7 @@
     <MESSAGE value="发现bug：运行时报错，ServiceDaoImpl类中selectByServiceId方法缺少返回值" />
     <MESSAGE value="Staff的dao和service层中的impl层有几个方法没有实现，我空实现了" />
     <MESSAGE value="dao层：增pay表、改(查)VIP和order表方法" />
-    <option name="LAST_COMMIT_MESSAGE" value="dao层：增pay表、改(查)VIP和order表方法" />
+    <MESSAGE value="修正合并错误" />
+    <option name="LAST_COMMIT_MESSAGE" value="修正合并错误" />
   </component>
 </project>
