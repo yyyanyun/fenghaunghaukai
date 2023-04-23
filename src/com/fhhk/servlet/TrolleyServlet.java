@@ -57,6 +57,12 @@ public class TrolleyServlet extends BaseServlet{
 
     }
 
+    /**
+     * 根据顾客id查询
+     * @param request
+     * @param response
+     * @throws SQLException
+     */
     public void selectTrolley(HttpServletRequest request, HttpServletResponse response) throws SQLException {
         int customer_id = Integer.parseInt(request.getParameter("customer_id"));
 
@@ -74,6 +80,13 @@ public class TrolleyServlet extends BaseServlet{
         }
         JsonUtils.toJson(resultVo,response);
     }
+
+    /**
+     * 根据tid 顾客id删除
+     * @param request
+     * @param response
+     * @throws SQLException
+     */
     public void deleteTrolley(HttpServletRequest request, HttpServletResponse response) throws SQLException {
         int tid = Integer.parseInt(request.getParameter("tid"));
         int customer_id = Integer.parseInt(request.getParameter("customer_id"));
